@@ -15,7 +15,7 @@ const Header = ({user, setUser}) => {
     })
     .catch((error) => {
       console.log("error :>>", error);
-      navigate("/login")
+      navigate("/signup")
     });
   };
   
@@ -27,7 +27,7 @@ const Header = ({user, setUser}) => {
                   <li>
                   <Link to="/signup">sign up</Link>
                   </li>
-                  {user.username ? (
+                  {user && user.username ? (
                     <>
                       <li>
                         <a href="#" onClick={handleLogout}>logout</a>

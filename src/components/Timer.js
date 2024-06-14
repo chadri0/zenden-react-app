@@ -1,4 +1,6 @@
+// this code contains the timerLogic functionality. i put it into a separate file bc the code is too long
 import React, {useState, useEffect} from 'react';
+import { Link } from 'react-router-dom';
 
 const Timer = () => {
     const initialSettings = JSON.parse(localStorage.getItem('timerSettings')) || {
@@ -84,7 +86,7 @@ const Timer = () => {
         startTimer();
       }
     }, []);
-  
+
     return (
       <div className="pomodoro-container">
         <div className="timer-container">
@@ -97,9 +99,9 @@ const Timer = () => {
           <button onClick={handleReset}>
             <i className="fa-solid fa-rotate-left"></i> reset
           </button>
-          <a href="#">
+         <Link to={"/settings"}>
             <i className="fa-solid fa-gear"></i>
-          </a>
+          </Link>
         </div>
       </div>
     );

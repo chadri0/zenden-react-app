@@ -1,12 +1,37 @@
 import React from 'react';
+import { useNavigate, Link } from "react-router-dom";
 
-const Signup = () => {
+function Signup({user, setUser}) {
+    const navigate = useNavigate();
+
+    const signupSubmit = (e) => {
+        e.preventDefault();
+        console.log("Signup submit handler ran.")
+        const formData = new FormData(e.target);
+        for (const [key, value] of formData.entries()) {
+            console.log(`${key}: ${value}`);
+        }
+
+        fetch(`http://localhost:4000/signup`, {
+            method: "POST",
+            body: JSON.stringify(formData),
+        })
+        .then((response) => response.json())
+        .then((result) => {
+            console.log("result :>>", result);
+            localStorage.setItem("user", JSON.stringify(result.data));
+            setUser(result.data);
+            navigate("/")
+        })
+        .catch(error => console.log("error creating new user:>>", error));
+    }
+
     return (
       <div>
         <main>
         <h1>Sign Up!</h1>
         <p className="signup-paragraph">Please fill in this form to create a free account.</p>
-        <form action="#" className="signup-form">
+        <form onSubmit={signupSubmit} className="signup-form">
             <div className="signup-field">
                 <label htmlFor="first-name">First name:</label>
                 <input type="text" name="first-name" id="first-name" required/>
@@ -28,11 +53,11 @@ const Signup = () => {
                 <input type="password" name="confirm-password" id="confirm-password" required/>
             </div>
             <div className="cancel-signup-btns">
-                <button type="button" className="cancel-button">Cancel</button>
-                <button type="button" className="signup-button">Sign Up</button>
+                <button type="button" className="cancel-button" onClick={() => navigate('/')}>Cancel</button>
+                <button type="submit" className="signup-button">Sign Up</button>
             </div>
             <div className="alrdy-have-accnt-container">
-            <p>Already have an account? <a href="#">Login</a></p>
+            <p>Already have an account? <Link to="/login">Login</Link></p>
             </div>
         </form>
         </main>
