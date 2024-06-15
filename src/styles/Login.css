@@ -1,0 +1,57 @@
+/* LOGIN STYLING */
+.login-form>div {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.login-field label {
+    text-align: left;
+    margin-bottom: 0.1rem;
+    flex-grow: 0.5;
+    flex-shrink: 0;
+    flex-basis: 150px;
+}
+
+.login-field input[type=email],
+.login-field input[type=password] {
+    background-color: var(--black);
+    outline: var(--white) solid 1px;
+    color: var(--white);
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 190px;
+    padding: 2%;
+    border-radius: 0.5vw;
+}
+
+.login-button {
+    padding: 1.5% 44.5%;
+    background-color: var(--light-grey);
+}
+
+.cancel-button {
+    padding: 1.5%;
+    background-color: var(--rust);
+}
+
+.login-button,
+.cancel-button {
+    color: var(--white);
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: bold;
+    border-radius: 0.4vw;
+    outline: none;
+    cursor: pointer; 
+}
+
+.cancel-forgot-links,
+.cancel-signup-btns {
+    justify-content: space-between;
+}
+
+.dnt-have-accnt-container,
+.alrdy-have-accnt-container,
+.terms-conditions {
+    margin: 0 auto;
+}

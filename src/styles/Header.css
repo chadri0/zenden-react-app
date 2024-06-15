@@ -1,0 +1,10 @@
+/* NAV STYLING */
+.navbar-list {
+    backdrop-filter: blur(12px);
+    padding: 3% 0 3% 0;
+    list-style: none;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.8rem;
+}

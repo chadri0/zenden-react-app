@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import "../styles/Settings.css";
+import "../styles/MediaQueries.css";
 import { useNavigate } from 'react-router-dom';
 
 const Settings = () => {

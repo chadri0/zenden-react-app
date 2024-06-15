@@ -1,0 +1,144 @@
+/* TO-DO LIST STYLING */
+.todolist {
+    background-color: var(--green);
+    border: 1px solid var(--white);
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+/* style the list items */
+.todolist-list li {
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    padding: 1%;
+    list-style-type: none;
+    transition: 0.2s;
+    /* make the list items unselectable */
+    user-select: none;
+    word-break: break-word;
+}
+
+.todolist-container {
+    padding: 2% 3%;
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.todolist-container:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.todolist-container input {
+    border-radius: 0.5vw;
+    width: 75%;
+    padding: 1%;
+    background-color: var(--black);
+    outline: var(--white) solid 1px;
+    color: var(--white);
+    font-size: 1.1rem;
+}
+
+.todolist-add {
+    padding: 1%;
+    width: 10%;
+    background: var(--light-grey);
+    color: var(--white);
+    cursor: pointer;
+    border-radius: 0.4vw;
+}
+
+/* darker background when hovering "add" button */
+.todolist-add:hover {
+    background-color: var(--dark-grey);
+}
+
+/* strikes out text when clicked to show task is done */
+.todolist-list li.checked {
+    text-decoration: line-through;
+    color: var(--red); 
+}
+
+/* style the delete button */
+.delete {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0.5rem;
+    color: var(--white);
+}
+
+.delete:hover {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+/* SETTINGS STYLING */
+.settings-title {
+    font-size: large;
+    font-weight: bold;
+}
+
+.timersettings-form>div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 1rem 0.5rem;
+    padding: 3rem 5rem;
+    border: 1px solid var(--white);
+    border-radius: 1vw;
+}
+
+.timersettings-form label {
+    text-align: left;
+    margin: 0.5rem 0 0.1rem 0;
+    flex-grow: 0.5;
+    flex-shrink: 0;
+    flex-basis: 30px; 
+}
+
+.timersettings-form input[type="number"],
+.timersettings-form select {
+    background-color: var(--black);
+    outline: var(--white) solid 1px;
+    color: var(--white);
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 5px;
+    padding: 1%;
+    border-radius: 0.5vw;
+}
+
+.timersettings-form select {
+    cursor: pointer;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+.save-reset-settings {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.savesettings-button,
+.resetsettings-button {
+    color: var(--white);
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: bold;
+    border-radius: 0.4vw;
+    padding: 1.5% 20%;
+    outline: none;
+    cursor: pointer; 
+}
+
+.savesettings-button {
+    background-color: var(--light-grey);
+}
+
+.resetsettings-button {
+    background-color: var(--rust);
+}

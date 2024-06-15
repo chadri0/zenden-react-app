@@ -1,5 +1,7 @@
 import React from 'react';
-import Timer from "./Timer";
+import Timer from "./TimerLogic";
+import "../styles/Home.css";
+import "../styles/MediaQueries.css";
 
 const Home = () => {
     return (

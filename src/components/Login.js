@@ -1,4 +1,6 @@
 import React from 'react';
+import "../styles/Login.css";
+import "../styles/MediaQueries.css";
 import {useNavigate, Link} from "react-router-dom";
 
 function Login({user, setUser}) {
