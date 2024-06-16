@@ -1,12 +1,14 @@
 // this code contains the timerLogic functionality. i put it into a separate file bc the code is too long
-import React, {useState, useEffect} from 'react';
-import { Link } from 'react-router-dom';
+import React, {useState, useEffect} from "react";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlay, faPause, faRotateLeft, faGear } from "@fortawesome/free-solid-svg-icons";
 
 const Timer = () => {
-    const initialSettings = JSON.parse(localStorage.getItem('timerSettings')) || {
+    const initialSettings = JSON.parse(localStorage.getItem("timerSettings")) || {
       minutes: 25,
       breakTime: 5,
-      alertSound: 'soft-alarm',
+      alertSound: "soft-alarm",
     };
   
     const defaultState = {
@@ -15,7 +17,7 @@ const Timer = () => {
       isWorkSession: true,
     };
   
-    const [state, setState] = useState(JSON.parse(localStorage.getItem('timerState')) || defaultState);
+    const [state, setState] = useState(JSON.parse(localStorage.getItem("timerState")) || defaultState);
     const [intervalId, setIntervalId] = useState(null);
   
     const workTime = initialSettings.minutes * 60;
@@ -23,7 +25,7 @@ const Timer = () => {
   
     useEffect(() => {
       const saveState = () => {
-        localStorage.setItem('timerState', JSON.stringify(state));
+        localStorage.setItem("timerState", JSON.stringify(state));
       };
   
       saveState();
@@ -32,7 +34,7 @@ const Timer = () => {
     const formatTime = (seconds) => {
       const minutes = Math.floor(seconds / 60);
       const secs = seconds % 60;
-      return `${String(minutes).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+      return `${String(minutes).padStart(2, "0")}:${String(secs).padStart(2, "0")}`;
     };
   
     const tick = () => {
@@ -94,13 +96,13 @@ const Timer = () => {
         </div>
         <div className="controls">
           <button onClick={handleStartPause}>
-            <i className={`fa-solid fa-${state.isRunning ? 'pause' : 'play'}`}></i> {state.isRunning ? 'pause' : 'start'}
+            <FontAwesomeIcon icon={state.isRunning ? faPause : faPlay} /> {state.isRunning ? "pause" : "start"}
           </button>
           <button onClick={handleReset}>
-            <i className="fa-solid fa-rotate-left"></i> reset
+            <FontAwesomeIcon icon={faRotateLeft} className="fa-rotate-left"/> reset
           </button>
          <Link to={"/settings"}>
-            <i className="fa-solid fa-gear"></i>
+            <FontAwesomeIcon icon={faGear} className="fa-gear"/>
           </Link>
         </div>
       </div>

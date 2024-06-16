@@ -1,13 +1,4 @@
 /* UNIV STYLING */
-.login-form,
-.signup-form,
-.signup-paragraph {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    width: 40%;
-}
-
 main {
   /* background-color: var(--black); */
   color: var(--white);
@@ -84,3 +75,4 @@ input {
 .resetsettings-button {
     background-color: var(--rust);
 }
+

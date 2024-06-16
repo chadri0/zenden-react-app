@@ -1,11 +1,12 @@
 import React, {useState} from 'react';
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Header from "./shared/Header";
 import Home from "./components/Home";
 import Login from "./components/Login";
 import Settings from "./components/Settings";
 import Signup from "./components/Signup";
 import Todolist from "./components/Todolist";
+import "./styles/MediaQueries.css";
 
 
 

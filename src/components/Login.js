@@ -52,7 +52,7 @@ function Login({user, setUser}) {
             </div>
             <div className="remember-me-label">
                 <label>
-                    <input type="checkbox" checked="checked" name="remember"/> Remember me
+                    <input type="checkbox" name="remember"/> Remember me
                   </label>
             </div>
             <div className="cancel-forgot-links">

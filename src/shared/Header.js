@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useState } from "react";
 import "../styles/Header.css";
-import { useNavigate, Link} from "react-router-dom";
+import "../styles/MediaQueries.css";
+import { useNavigate, Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 
 const Header = ({user, setUser}) => {
   const navigate = useNavigate();
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const handleLogout = () => {
     fetch(`http://localhost:4000/logout`)
@@ -19,12 +23,16 @@ const Header = ({user, setUser}) => {
       navigate("/signup")
     });
   };
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
   
     return (
       <div>
         <header>
-          <nav>
-              <ul className="navbar-list">
+          <nav className="navbar">
+              <ul className={`navbar-list ${menuOpen ? "open" : ""}`}>
                   <li>
                     <Link to="/">home</Link>
                   </li>
@@ -46,9 +54,9 @@ const Header = ({user, setUser}) => {
                     </li>
                   )}
               </ul>
-              <i className="fa-solid fa-bars fa-lg"></i>
           </nav>
         </header>
+        <FontAwesomeIcon icon={menuOpen ? faXmark : faBars} className="fa-bars" onClick={toggleMenu}/>
       </div>
     )
   }
