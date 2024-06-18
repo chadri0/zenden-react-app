@@ -50,10 +50,10 @@ function Signup({user, setUser}) {
                 <label htmlFor="password">Password:</label>
                 <input type="password" name="password" id="password" required/>
             </div>
-            <div className="signup-field">
+            {/* <div className="signup-field">
                 <label htmlFor="confirm-password">Confirm password:</label>
                 <input type="password" name="confirm-password" id="confirm-password" required/>
-            </div>
+            </div> */}
             <div className="cancel-signup-btns">
                 <button type="button" className="cancel-button" onClick={() => navigate('/')}>Cancel</button>
                 <button type="submit" className="signup-button">Sign Up</button>
