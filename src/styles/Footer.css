@@ -7,7 +7,7 @@ footer {
     margin-top: 10%;
 }
 
-.contact-container h3 {
+.contact-container p {
     margin: 0;
     font-size: 1.8rem;
 }
@@ -33,6 +33,6 @@ footer {
 }
 
 .footer-icon {
-    font-size: 2rem; /* Ensure consistent icon size */
+    font-size: 2rem;
 }
 

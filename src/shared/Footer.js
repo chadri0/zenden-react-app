@@ -9,7 +9,7 @@ const Footer = () => {
         <div>
             <footer>
                 <div className="contact-container">
-                    <h3>contact me here !</h3>
+                    <p>contact me here !</p>
                     <div className="contact-icons">
                         <a href="mailto:char.ordo1@gmail.com" target="_blank" rel="noopener noreferrer">
                             <FontAwesomeIcon icon={faEnvelope} className="footer-icon"/>
