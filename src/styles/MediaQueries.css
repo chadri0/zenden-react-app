@@ -1,0 +1,134 @@
+/* HOME MEDIA QUERIES */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    /* mobile size */    
+    html {
+        font-size: 9px;
+    }
+
+    section {
+        margin-top: 45%;
+    } 
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    /*tablet size  */
+    .fa-bars {
+        font-size: 3rem !important;
+        margin: 8% 0 0 5%;
+    }
+
+    html {
+        font-size: 13px;
+    }
+
+    section {
+        margin-top: 30%;
+    } 
+}
+
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    /*tablet and mobile size  */
+    .navbar-list {
+        display: none;
+    }
+
+    .fa-bars {
+        display: block;
+        margin: 0 0 0 5%;
+        padding: 5% 0 0 0;
+        color: var(--white);
+    }
+
+    /* .login-form,
+    .signup-form,
+    .signup-paragraph,
+    .timersettings-form {
+        width: 100%;
+    } */
+
+    .resetsettings-button,
+    .savesettings-button {
+        width: 100%;
+    }
+
+    html, 
+    body {
+        overflow-x: hidden;
+    }
+
+    html {
+        font-size: 11px;
+    }
+
+    .delete {
+        position: static;
+        transform: none;
+        margin-left: auto;
+    }
+
+    /* .todolist-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .todolist-container input {
+        width: 100%;
+    }
+
+    .todolist-add {
+        width: 100%;
+        margin-top: 1rem;
+    } */
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    /*tablet size  */
+    .signup-field input[type=email],
+    .signup-field input[type=password],
+    .signup-field input[type="text"],
+    .login-field input[type=email],
+    .login-field input[type=password] {
+        padding: 0.5%;
+    }
+
+    .signup-field label,
+    .login-field label {
+        flex-grow: 0.5;
+        flex-shrink: 0;
+        flex-basis: 5px;
+        text-align: right;
+        margin-right: 1.95%;
+    }
+
+    /* .login-button {
+        margin: 0 auto;
+        padding: 1% 5%;
+    } */
+
+    /* hamburger menu */
+    .navbar-list {
+        padding: 35px 0 10px 35px;
+    }
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+   /* desktop styling */ 
+   .fa-bars {
+    display: none !important;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .fa-bars {
+    display: none !important;
+    }
+
+    .signup-field label,
+    .login-field label {
+        text-align: right;
+        margin-right: 1.95%;
+    }
+}
