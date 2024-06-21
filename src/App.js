@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { Route, Routes } from "react-router-dom";
 import Header from "./shared/Header";
+import Footer from "./shared/Footer";
 import Home from "./components/Home";
 import Login from "./components/Login";
 import Settings from "./components/Settings";
@@ -23,6 +24,7 @@ function App() {
       <Route path="/signup" element={<Signup user={user} setUser={setUser} />} />
       <Route path="/todolist" element={<Todolist />} />
       </Routes> 
+      <Footer />
     </div>
   );
 }

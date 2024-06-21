@@ -1,0 +1,38 @@
+/* FOOTER STYLING */
+footer {
+    padding: 1.5% 0;
+    backdrop-filter: blur(5px);
+    color: #fff;
+    text-align: center;
+    margin-top: 10%;
+}
+
+.contact-container h3 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.contact-icons a {
+    margin: 0 1rem;
+    font-size: 2rem;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.contact-icons a:hover {
+    font-weight: bold;
+    background-color: var(--white);
+    color: var(--black);
+    border-radius: 0.4vw;
+}
+
+.footer-icon {
+    font-size: 2rem; /* Ensure consistent icon size */
+}
+

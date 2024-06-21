@@ -21,9 +21,9 @@ function Signup({user, setUser}) {
         .then((response) => response.json())
         .then((result) => {
             console.log("result :>>", result);
-            localStorage.setItem("user", JSON.stringify(result.data));
+            localStorage.setItem("user", JSON.stringify(formData.data));
             setUser(result.data);
-            navigate("/")
+            // navigate("/")
         })
         .catch(error => console.log("error creating new user:>>", error));
     }

@@ -9,3 +9,34 @@
     font-size: 1.8rem;
 }
 
+/* media query for the hamburger menu and navbar */
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    /* mobile and tablet size */
+    .navbar-list {
+        font-size: 1.6rem;
+        position: absolute;
+        top: 40px;
+        flex-direction: column;
+        row-gap: 10px;
+        width: 100%;
+        padding: 15px 0 10px 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-list.open {
+        display: flex;
+    }
+    
+    .fa-bars {
+        font-size: 3rem !important;
+        opacity: 0.8;
+        cursor: pointer;
+    }
+
+    html, 
+    body {
+        overflow-x: hidden;
+    }
+}
+/* end of hamburger menu and navbar MQ */
+
